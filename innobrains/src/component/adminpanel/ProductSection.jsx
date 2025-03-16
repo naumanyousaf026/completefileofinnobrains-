@@ -18,7 +18,7 @@ const ProductSection = () => {
 
   const fetchProducts = async () => {
     try {
-      const response = await fetch("http://localhost:5000/api/product");
+      const response = await fetch("https://apis.innobrains.pk/api/product");
       if (!response.ok) {
         throw new Error("Failed to fetch product data");
       }
@@ -33,7 +33,7 @@ const ProductSection = () => {
   const handleDelete = async (productId) => {
     try {
       const response = await fetch(
-        `http://localhost:5000/api/product/${productId}`,
+        `https://apis.innobrains.pk\/api/product/${productId}`,
         {
           method: "DELETE",
         }
@@ -126,7 +126,7 @@ const ProductSection = () => {
                     <tr key={index} className="border-t">
                       <td className="px-4 py-2">
                         <img
-                          src={`http://localhost:5000/uploads/${product.image}`}
+                          src={`https://apis.innobrains.pk/uploads/${product.image}`}
                           alt={product.name}
                           className="w-12 h-12 sm:w-16 sm:h-16 rounded-md"
                         />

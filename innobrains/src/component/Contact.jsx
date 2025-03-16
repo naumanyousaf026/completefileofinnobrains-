@@ -28,7 +28,7 @@ export const ContactCompo = () => {
     console.log("Form data to be submitted:", formData); // Log form data
 
     try {
-      const response = await axios.post("http://localhost:5000/api/contact", {
+      const response = await axios.post("https://apis.innobrains.pk/api/contact", {
         FirstName: formData.FirstName,
         LastName: formData.LastName,
         email: formData.email,

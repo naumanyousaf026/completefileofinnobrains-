@@ -8,7 +8,7 @@ const Visitor = ({ isOpen, toggleSidebar }) => {
   useEffect(() => {
     const fetchVisitorData = async () => {
       try {
-        const response = await axios.get("http://localhost:5000/api/visitor");
+        const response = await axios.get("https://apis.innobrains.pk/api/visitor");
         console.log("API response:", response.data);
 
         if (Array.isArray(response.data)) {

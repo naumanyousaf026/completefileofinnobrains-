@@ -66,8 +66,8 @@ const ServiceForm = ({ service, onClose }) => {
 
     const method = service ? "PUT" : "POST";
     const url = service
-      ? `http://localhost:5000/api/service/${service._id}`
-      : "http://localhost:5000/api/service";
+      ? `https://apis.innobrains.pk/api/service/${service._id}`
+      : "https://apis.innobrains.pk/api/service";
     const form = new FormData();
     form.append("name", formData.name);
     form.append("description", formData.description);

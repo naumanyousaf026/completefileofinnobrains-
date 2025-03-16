@@ -21,7 +21,7 @@ function Signupform() {
 
     try {
       const response = await axios.post(
-        "http://localhost:5000/api/admin/register",
+        "https://apis.innobrains.pk/api/admin/register",
         {
           email,
           name, // Changed from username to name

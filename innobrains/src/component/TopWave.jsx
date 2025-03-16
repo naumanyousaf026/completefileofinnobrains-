@@ -44,7 +44,7 @@ function Wave() {
   useEffect(() => {
     const fetchSatisfactionData = async () => {
       try {
-        const response = await axios.get("http://localhost:5000/api/satisfie");
+        const response = await axios.get("https://apis.innobrains.pk/api/satisfie");
         setSatisfactionData(response.data);
       } catch (error) {
         console.error("Error fetching satisfaction data", error);

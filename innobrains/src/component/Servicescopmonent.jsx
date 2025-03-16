@@ -8,7 +8,7 @@ const ServicesSection = ({ limit }) => {
   useEffect(() => {
     const fetchServices = async () => {
       try {
-        const response = await fetch("http://localhost:5000/api/service");
+        const response = await fetch("https://apis.innobrains.pk/api/service");
         if (!response.ok) {
           throw new Error(`HTTP error! status: ${response.status}`);
         }
@@ -36,7 +36,7 @@ const ServicesSection = ({ limit }) => {
             <div className="flex mb-4">
               <div className="p-4 rounded">
                 <img
-                  src={`http://localhost:5000/ServiceImage/${service.image}`}
+                  src={`https://apis.innobrains.pk/ServiceImage/${service.image}`}
                   alt={service.name}
                   className="w-20 h-20 rounded-md"
                 />

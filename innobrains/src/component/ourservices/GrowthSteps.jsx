@@ -8,14 +8,14 @@ const GrowthSteps = () => {
   useEffect(() => {
     const fetchSteps = async () => {
       try {
-        const response = await fetch("http://localhost:5000/api/growthsteps"); // Update the URL to match your API
+        const response = await fetch("https://apis.innobrains.pk/api/growthsteps"); // Update the URL to match your API
         const data = await response.json();
         // Map the data to include the images
         const stepsWithImages = data.map((step) => ({
           ...step,
           image: step.image
-            ? `http://localhost:5000/growthImage/${step.image}`
-            : "http://localhost:5000/growthImage/handpointer.png", // Fallback image URL
+            ? `https://apis.innobrains.pk/growthImage/${step.image}`
+            : "https://apis.innobrains.pk/growthImage/handpointer.png", // Fallback image URL
         }));
         setSteps(stepsWithImages);
       } catch (error) {

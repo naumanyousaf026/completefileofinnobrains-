@@ -9,7 +9,7 @@ const TeamSection = () => {
   useEffect(() => {
     const fetchTeamMembers = async () => {
       try {
-        const response = await fetch("http://localhost:5000/api/team"); // Adjust the URL if necessary
+        const response = await fetch("https://apis.innobrains.pk/api/team"); // Adjust the URL if necessary
         if (!response.ok) {
           throw new Error("Failed to fetch team members");
         }
@@ -17,7 +17,7 @@ const TeamSection = () => {
         // Map the data to include the images, setting a proper image path
         const membersWithImages = data.map((member) => ({
           ...member,
-          image: `http://localhost:5000/TeamImages/${
+          image: `https://apis.innobrains.pk/TeamImages/${
             member.image || "defaultImage.png"
           }`, // Ensure the path points to the correct image folder
         }));

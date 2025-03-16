@@ -51,8 +51,8 @@ const ProductForm = ({ product }) => {
 
       try {
         const url = product
-          ? `http://localhost:5000/api/product/${product._id}`
-          : "http://localhost:5000/api/product";
+          ? `https://apis.innobrains.pk/api/product/${product._id}`
+          : "https://apis.innobrains.pk/api/product";
         const method = product ? "PUT" : "POST";
 
         const response = await fetch(url, {

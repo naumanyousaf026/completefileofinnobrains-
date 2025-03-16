@@ -73,11 +73,11 @@ const BlogForm = ({ blog, onClose }) => {
 
     try {
       const response = blog
-        ? await fetch(`http://localhost:5000/api/blog/${blog._id}`, {
+        ? await fetch(`https://apis.innobrains.pk/api/blog/${blog._id}`, {
             method: "PUT",
             body: formData,
           })
-        : await fetch("http://localhost:5000/api/blog", {
+        : await fetch("https://apis.innobrains.pk/api/blog", {
             method: "POST",
             body: formData,
           });

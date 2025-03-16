@@ -28,7 +28,7 @@ const ContactUs = () => {
     try {
       // Send form data to the backend API
       const response = await axios.post(
-        "http://localhost:5000/api/contact",
+        "https://apis.innobrains.pk/api/contact",
         formData
       );
       setSuccessMessage("Your message has been sent successfully!");

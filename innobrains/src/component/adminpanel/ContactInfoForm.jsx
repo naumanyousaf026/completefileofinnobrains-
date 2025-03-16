@@ -21,7 +21,7 @@ function ContactInfoForm() {
     e.preventDefault();
     try {
       const response = await axios.post(
-        "http://localhost:5000/api/contact-info",
+        "https://apis.innobrains.pk/api/contact-info",
         formData
       );
       if (response.status === 200) {

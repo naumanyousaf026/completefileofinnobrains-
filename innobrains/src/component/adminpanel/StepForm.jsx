@@ -79,7 +79,7 @@ const GrowthStepForm = ({ step, onClose = () => {} }) => {
     formDataObj.append("image", formData.image);
 
     try {
-      const response = await fetch("http://localhost:5000/api/growthsteps", {
+      const response = await fetch("https://apis.innobrains.pk/api/growthsteps", {
         method: "POST",
         body: formDataObj,
       });

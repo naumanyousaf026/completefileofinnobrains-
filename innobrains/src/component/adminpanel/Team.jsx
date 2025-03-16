@@ -15,7 +15,7 @@ const Team = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get("http://localhost:5000/api/team");
+        const response = await axios.get("https://apis.innobrains.pk/api/team");
         setData(response.data); // Assuming the response is an array
       } catch (err) {
         setError(err.message);
@@ -35,7 +35,7 @@ const Team = () => {
   const updateMember = async (updatedMember) => {
     try {
       await axios.put(
-        `http://localhost:5000/api/team/${updatedMember._id}`,
+        `https://apis.innobrains.pk/api/team/${updatedMember._id}`,
         updatedMember
       );
       setData((prev) =>
@@ -57,7 +57,7 @@ const Team = () => {
 
   const handleDelete = async (index) => {
     try {
-      await axios.delete(`http://localhost:5000/api/team/${data[index]._id}`); // Assuming your data has _id
+      await axios.delete(`https://apis.innobrains.pk/api/team/${data[index]._id}`); // Assuming your data has _id
       setData((prev) => prev.filter((_, i) => i !== index));
     } catch (err) {
       console.error("Error deleting member:", err);
@@ -110,8 +110,8 @@ const Team = () => {
               <img
                 src={
                   person.image
-                    ? `http://localhost:5000/TeamImages/${person.image}`
-                    : `http://localhost:5000/TeamImages/defaultImage.png`
+                    ? `https://apis.innobrains.pk/TeamImages/${person.image}`
+                    : `https://apis.innobrains.pk/TeamImages/defaultImage.png`
                 }
                 alt={person.name}
                 className="w-28 h-28 rounded-full mx-auto mb-4 object-cover"

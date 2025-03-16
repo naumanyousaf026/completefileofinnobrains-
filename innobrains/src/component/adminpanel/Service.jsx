@@ -16,7 +16,7 @@ const Service = () => {
 
   const fetchServices = async () => {
     try {
-      const response = await fetch("http://localhost:5000/api/service");
+      const response = await fetch("https://apis.innobrains.pk/api/service");
       if (!response.ok) {
         throw new Error("Failed to fetch services");
       }
@@ -30,7 +30,7 @@ const Service = () => {
   const handleDelete = async (serviceId) => {
     try {
       const response = await fetch(
-        `http://localhost:5000/api/service/${serviceId}`,
+        `https://apis.innobrains.pk/api/service/${serviceId}`,
         {
           method: "DELETE",
         }
@@ -113,7 +113,7 @@ const Service = () => {
                     <tr key={service._id} className="border-t">
                       <td className="px-4 py-2">
                         <img
-                          src={`http://localhost:5000/ServiceImage/${service.image}`}
+                          src={`https://apis.innobrains.pk/ServiceImage/${service.image}`}
                           alt={service.name}
                           className="w-16 h-16 rounded-md"
                           onError={(e) => {

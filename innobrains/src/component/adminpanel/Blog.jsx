@@ -15,7 +15,7 @@ const Blog = () => {
 
   const fetchBlogs = async () => {
     try {
-      const response = await fetch("http://localhost:5000/api/blog");
+      const response = await fetch("https://apis.innobrains.pk/api/blog");
       if (!response.ok) {
         throw new Error("Failed to fetch blogs");
       }
@@ -28,7 +28,7 @@ const Blog = () => {
 
   const handleDelete = async (blogId) => {
     try {
-      const response = await fetch(`http://localhost:5000/api/blog/${blogId}`, {
+      const response = await fetch(`https://apis.innobrains.pk/api/blog/${blogId}`, {
         method: "DELETE",
       });
 
@@ -99,7 +99,7 @@ const Blog = () => {
                 className="bg-white rounded-lg shadow-md p-4 flex flex-col"
               >
                 <img
-                  src={`http://localhost:5000${blog.image}`}
+                  src={`https://apis.innobrains.pk${blog.image}`}
                   alt={blog.title}
                   className="w-full h-32 object-cover rounded-md"
                   onError={(e) => {

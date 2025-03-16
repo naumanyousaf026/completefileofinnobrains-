@@ -11,7 +11,7 @@ function RecentWork() {
   useEffect(() => {
     const fetchProjects = async () => {
       try {
-        const response = await fetch("http://localhost:5000/api/product"); // Ensure this URL matches your backend
+        const response = await fetch("https://apis.innobrains.pk/api/product"); // Ensure this URL matches your backend
         if (!response.ok) {
           throw new Error("Failed to fetch project data");
         }
@@ -50,7 +50,7 @@ function RecentWork() {
             >
               <div className="flex-1 bg-black text-white flex items-center justify-center h-64">
                 <img
-                  src={`http://localhost:5000/uploads/${project.image}`} // Updated image path
+                  src={`https://apis.innobrains.pk/uploads/${project.image}`} // Updated image path
                   alt={project.name}
                   className="w-32 h-50 object-contain"
                 />

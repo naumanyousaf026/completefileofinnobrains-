@@ -22,7 +22,7 @@ const ResetPassword = () => {
 
     try {
       const response = await axios.post(
-        "http://localhost:5000/api/admin/resetpassword",
+        "https://apis.innobrains.pk/api/admin/resetpassword",
         {
           email: location.state.email,
           newPassword,

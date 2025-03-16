@@ -21,7 +21,7 @@ const VerifyOTP = () => {
     try {
       const otpString = otp.join(""); // Combine OTP input into a single string
       const response = await axios.post(
-        "http://localhost:5000/api/admin/verifyotp",
+        "https://apis.innobrains.pk/api/admin/verifyotp",
         {
           email: location.state.email, // Get the email from previous state
           otp: otpString,

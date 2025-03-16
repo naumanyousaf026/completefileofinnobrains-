@@ -11,7 +11,7 @@ const Achievements = () => {
     const fetchAchievements = async () => {
       try {
         const response = await axios.get(
-          "http://localhost:5000/api/achievements"
+          "https://apis.innobrains.pk/api/achievements"
         );
         console.log(response.data); // Log the response to check structure
         if (response.data.length > 0) {

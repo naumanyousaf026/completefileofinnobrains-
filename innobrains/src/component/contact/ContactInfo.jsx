@@ -10,7 +10,7 @@ const ContactInfo = () => {
   const [contactInfo, setContactInfo] = useState(null);
 
   useEffect(() => {
-    fetch("http://localhost:5000/api/contact-info") // Change the URL as needed
+    fetch("https://apis.innobrains.pk/api/contact-info") // Change the URL as needed
       .then((response) => response.json())
       .then((data) => {
         setContactInfo(data);

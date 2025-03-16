@@ -12,7 +12,7 @@ const Login = () => {
     e.preventDefault();
     try {
       const response = await axios.post(
-        "http://localhost:5000/api/admin/login",
+        "https://apis.innobrains.pk/api/admin/login",
         {
           email,
           password,

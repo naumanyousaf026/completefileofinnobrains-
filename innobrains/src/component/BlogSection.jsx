@@ -8,7 +8,7 @@ const BlogSection = ({ limit }) => {
   useEffect(() => {
     const fetchBlogs = async () => {
       try {
-        const response = await fetch("http://localhost:5000/api/blog");
+        const response = await fetch("https://apis.innobrains.pk/api/blog");
         if (!response.ok) {
           throw new Error("Failed to fetch blog data");
         }
@@ -35,7 +35,7 @@ const BlogSection = ({ limit }) => {
             >
               <img
                 className="w-full h-48 object-cover"
-                src={`http://localhost:5000${blog.image}`}
+                src={`https://apis.innobrains.pk${blog.image}`}
                 alt="Blog"
                 onError={(e) => {
                   e.target.src = "/images/default-image.jpg";

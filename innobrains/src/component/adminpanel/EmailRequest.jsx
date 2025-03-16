@@ -13,7 +13,7 @@ const EmailRequest = () => {
 
     try {
       const response = await axios.post(
-        "http://localhost:5000/api/admin/sendotp", // Corrected the route here
+        "https://apis.innobrains.pk/api/admin/sendotp", // Corrected the route here
         { email }
       );
 
